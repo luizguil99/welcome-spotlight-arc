@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
         isScrolled 
-          ? 'py-3 bg-white/80 backdrop-blur-lg shadow-sm' 
+          ? 'py-3 bg-white/90 backdrop-blur-lg shadow-sm' 
           : 'py-5 bg-transparent'
       }`}
     >
@@ -27,10 +27,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <a 
             href="#" 
-            className="text-xl font-semibold tracking-tight"
+            className="text-xl font-bold tracking-tight"
             aria-label="Home"
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-gray-900">
               Nova
             </span>
           </a>
@@ -41,7 +41,7 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors duration-200"
               >
                 {item}
               </a>
@@ -52,7 +52,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <a
               href="#contact"
-              className="px-5 py-2.5 rounded-md bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
+              className="px-5 py-2.5 rounded-md bg-gradient-to-r from-indigo-600 to-indigo-700 text-white text-sm font-medium hover:from-indigo-500 hover:to-indigo-600 transition-all duration-200 shadow-md hover:shadow-indigo-500/20"
             >
               Get Started
             </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="block py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="block py-2 text-gray-600 hover:text-indigo-600 transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item}
@@ -89,7 +89,7 @@ const Navbar = () => {
             ))}
             <a
               href="#contact"
-              className="block py-2 px-4 mt-2 rounded-md bg-black text-white text-center hover:bg-gray-800 transition-colors duration-200"
+              className="block py-2 px-4 mt-2 rounded-md bg-gradient-to-r from-indigo-600 to-indigo-700 text-white text-center hover:from-indigo-500 hover:to-indigo-600 transition-all duration-200"
               onClick={() => setMobileMenuOpen(false)}
             >
               Get Started

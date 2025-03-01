@@ -67,13 +67,13 @@ const Features = () => {
   }, [visibleFeatures]);
 
   return (
-    <section id="features" className="py-20 bg-gray-50">
+    <section id="features" className="py-20 bg-gradient-to-b from-white to-gray-50/80">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="block text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">
+          <span className="block text-sm font-medium text-indigo-600 mb-3 uppercase tracking-wider bg-indigo-50 rounded-full px-3 py-1 inline-block">
             Features
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-800 to-gray-900">
             Designed with Purpose
           </h2>
           <p className="text-lg text-gray-600">
@@ -86,17 +86,17 @@ const Features = () => {
             <div
               key={feature.id}
               data-feature-id={feature.id}
-              className={`feature-card glass-card rounded-xl p-6 transition-all duration-500 hover-lift ${
+              className={`feature-card rounded-xl p-6 transition-all duration-500 border border-gray-100 bg-white shadow-md hover:shadow-xl hover:-translate-y-1 ${
                 visibleFeatures.includes(feature.id)
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-8'
               }`}
             >
-              <div className="mb-4 text-3xl">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-              <div className="mt-6 flex items-center text-sm text-gray-500">
-                <Check size={16} className="mr-2 text-green-500" />
+              <div className="mb-4 text-3xl bg-indigo-50 w-12 h-12 flex items-center justify-center rounded-lg">{feature.icon}</div>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">{feature.title}</h3>
+              <p className="text-gray-600 mb-4">{feature.description}</p>
+              <div className="mt-auto flex items-center text-sm text-gray-500">
+                <Check size={16} className="mr-2 text-indigo-500" />
                 <span>Available now</span>
               </div>
             </div>
@@ -106,7 +106,7 @@ const Features = () => {
         <div className="mt-16 text-center">
           <a
             href="#about"
-            className="inline-flex items-center px-6 py-3 border border-gray-300 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 transition-colors duration-200"
+            className="inline-flex items-center px-6 py-3 border border-gray-300 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-indigo-600 transition-colors duration-200 shadow-sm hover:shadow-md"
           >
             Learn More About Our Approach
           </a>

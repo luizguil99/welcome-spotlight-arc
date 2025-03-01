@@ -28,14 +28,15 @@ const CallToAction = () => {
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-gray-900 to-gray-950 text-white relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-10">
-        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-indigo-500 filter blur-[100px]"></div>
-        <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full bg-blue-500 filter blur-[100px]"></div>
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
+        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-indigo-500 filter blur-[120px]"></div>
+        <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full bg-blue-500 filter blur-[120px]"></div>
+        <div className="absolute top-[30%] right-[20%] w-[20%] h-[20%] rounded-full bg-purple-500 filter blur-[100px]"></div>
       </div>
       
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-blue-200">
             Ready to Experience the Difference?
           </h2>
           <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -47,7 +48,7 @@ const CallToAction = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-5 py-3 rounded-md border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
+                className="flex-1 px-5 py-3 rounded-md border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all shadow-lg"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -55,7 +56,7 @@ const CallToAction = () => {
               />
               <button
                 type="submit"
-                className={`group px-5 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white rounded-md font-medium transition-all duration-200 flex items-center justify-center ${isSubmitting ? 'opacity-75 cursor-wait' : ''} ${isSubmitted ? 'bg-green-500 hover:bg-green-500' : ''}`}
+                className={`group px-5 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white rounded-md font-medium transition-all duration-200 flex items-center justify-center shadow-lg hover:shadow-indigo-500/20 hover:shadow-xl ${isSubmitting ? 'opacity-75 cursor-wait' : ''} ${isSubmitted ? 'bg-green-500 hover:bg-green-500' : ''}`}
                 disabled={isSubmitting || isSubmitted}
               >
                 {isSubmitting ? (
@@ -76,15 +77,15 @@ const CallToAction = () => {
           </form>
           
           <div className="mt-20 pt-10 border-t border-gray-800 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-2 p-6 rounded-lg bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:bg-gray-800/80 transition-all duration-300">
+            <div className="space-y-2 p-6 rounded-lg bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:bg-gray-800/80 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-900/10 hover:-translate-y-1">
               <div className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-400">2M+</div>
               <p className="text-sm text-gray-400">Active users</p>
             </div>
-            <div className="space-y-2 p-6 rounded-lg bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:bg-gray-800/80 transition-all duration-300">
+            <div className="space-y-2 p-6 rounded-lg bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:bg-gray-800/80 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-900/10 hover:-translate-y-1">
               <div className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-400">500+</div>
               <p className="text-sm text-gray-400">Businesses powered</p>
             </div>
-            <div className="space-y-2 p-6 rounded-lg bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:bg-gray-800/80 transition-all duration-300">
+            <div className="space-y-2 p-6 rounded-lg bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:bg-gray-800/80 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-900/10 hover:-translate-y-1">
               <div className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-400">99%</div>
               <p className="text-sm text-gray-400">Satisfaction rate</p>
             </div>

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Nova</h3>
+            <h3 className="text-lg font-semibold mb-4 text-indigo-900">Nova</h3>
             <p className="text-gray-600 mb-6 max-w-xs">
               Elevating design through simplicity and thoughtful innovation.
             </p>
@@ -19,7 +19,7 @@ const Footer = () => {
                   key={social}
                   href="#"
                   aria-label={`${social} profile`}
-                  className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-600 shadow-sm hover:bg-gray-50 transition-colors"
+                  className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-600 shadow-sm hover:bg-indigo-50 hover:text-indigo-600 transition-all duration-300"
                 >
                   <span className="capitalize first-letter:uppercase">{social.charAt(0)}</span>
                 </a>
@@ -28,11 +28,11 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Product</h3>
+            <h3 className="text-lg font-semibold mb-4 text-indigo-900">Product</h3>
             <ul className="space-y-3">
               {['Features', 'Pricing', 'Case Studies', 'Reviews', 'Updates'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
                     {item}
                   </a>
                 </li>
@@ -41,11 +41,11 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-indigo-900">Company</h3>
             <ul className="space-y-3">
               {['About', 'Team', 'Careers', 'Press', 'Contact'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
                     {item}
                   </a>
                 </li>
@@ -54,13 +54,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4 text-indigo-900">Resources</h3>
             <ul className="space-y-3">
               {['Blog', 'Newsletter', 'Help Center', 'Support', 'Privacy'].map((item) => (
                 <li key={item}>
                   <a 
                     href="#" 
-                    className="text-gray-600 hover:text-gray-900 transition-colors inline-flex items-center"
+                    className="text-gray-600 hover:text-indigo-600 transition-colors inline-flex items-center"
                   >
                     {item}
                     {item === 'Blog' && <ExternalLink size={14} className="ml-1" />}
@@ -78,17 +78,17 @@ const Footer = () => {
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6 text-sm">
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
                   Terms
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
                   Privacy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
                   Cookies
                 </a>
               </li>

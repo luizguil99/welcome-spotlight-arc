@@ -56,16 +56,16 @@ const Testimonials = () => {
   }, [isVisible]);
 
   return (
-    <section id="testimonials" className="py-20 overflow-hidden bg-white">
+    <section id="testimonials" className="py-20 overflow-hidden bg-gradient-to-b from-gray-50/80 to-white">
       <div 
         id="testimonials-section"
         className="container mx-auto px-6 max-w-7xl"
       >
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="block text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">
+          <span className="block text-sm font-medium text-indigo-600 mb-3 uppercase tracking-wider bg-indigo-50 rounded-full px-3 py-1 inline-block">
             Testimonials
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-800 to-gray-900">
             What People Are Saying
           </h2>
           <p className="text-lg text-gray-600">
@@ -75,7 +75,7 @@ const Testimonials = () => {
 
         <div className="max-w-4xl mx-auto mt-16 relative">
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-[110%] h-[110%] bg-gray-50 rounded-full opacity-70 blur-3xl"></div>
+            <div className="w-[110%] h-[110%] bg-indigo-50/50 rounded-full opacity-70 blur-3xl"></div>
           </div>
 
           <div className="relative z-10">
@@ -92,7 +92,7 @@ const Testimonials = () => {
                   }`}
                 >
                   <div className="mb-6">
-                    <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-white shadow-md">
+                    <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg">
                       <img
                         src={testimonial.image}
                         alt={testimonial.author}
@@ -110,7 +110,7 @@ const Testimonials = () => {
 
                   <footer>
                     <div className="font-medium text-gray-900">{testimonial.author}</div>
-                    <div className="text-sm text-gray-500">{testimonial.role}</div>
+                    <div className="text-sm text-indigo-600">{testimonial.role}</div>
                   </footer>
                 </div>
               ))}
@@ -122,7 +122,7 @@ const Testimonials = () => {
                   key={index}
                   onClick={() => setActiveIndex(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    index === activeIndex ? 'bg-gray-800 w-5' : 'bg-gray-300'
+                    index === activeIndex ? 'bg-indigo-600 w-6' : 'bg-gray-300'
                   }`}
                   aria-label={`View testimonial ${index + 1}`}
                 />
