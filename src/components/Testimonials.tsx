@@ -8,6 +8,7 @@ const testimonials = [
     author: "Sarah Johnson",
     role: "Creative Director",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+    gradient: "from-purple-100 to-indigo-100",
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ const testimonials = [
     author: "Michael Chen",
     role: "Product Designer",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+    gradient: "from-blue-100 to-purple-100",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const testimonials = [
     author: "Emma Davies",
     role: "UX Researcher",
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+    gradient: "from-pink-100 to-purple-100",
   },
 ];
 
@@ -55,17 +58,19 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, [isVisible]);
 
+  const activeTesti = testimonials[activeIndex];
+
   return (
-    <section id="testimonials" className="py-20 overflow-hidden bg-gradient-to-b from-gray-50/80 to-white">
+    <section id="testimonials" className="py-20 overflow-hidden bg-gradient-to-b from-indigo-50/20 to-white">
       <div 
         id="testimonials-section"
         className="container mx-auto px-6 max-w-7xl"
       >
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="block text-sm font-medium text-indigo-600 mb-3 uppercase tracking-wider bg-indigo-50 rounded-full px-3 py-1 inline-block">
+          <span className="block text-sm font-medium text-purple-600 mb-3 uppercase tracking-wider bg-purple-50 rounded-full px-3 py-1 inline-block">
             Testimonials
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-800 to-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-800 to-indigo-800">
             What People Are Saying
           </h2>
           <p className="text-lg text-gray-600">
@@ -75,7 +80,7 @@ const Testimonials = () => {
 
         <div className="max-w-4xl mx-auto mt-16 relative">
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-[110%] h-[110%] bg-indigo-50/50 rounded-full opacity-70 blur-3xl"></div>
+            <div className={`w-[110%] h-[110%] bg-gradient-to-r ${activeTesti.gradient} rounded-full opacity-70 blur-3xl transition-colors duration-500`}></div>
           </div>
 
           <div className="relative z-10">
@@ -110,7 +115,7 @@ const Testimonials = () => {
 
                   <footer>
                     <div className="font-medium text-gray-900">{testimonial.author}</div>
-                    <div className="text-sm text-indigo-600">{testimonial.role}</div>
+                    <div className="text-sm text-purple-600">{testimonial.role}</div>
                   </footer>
                 </div>
               ))}
@@ -122,7 +127,7 @@ const Testimonials = () => {
                   key={index}
                   onClick={() => setActiveIndex(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    index === activeIndex ? 'bg-indigo-600 w-6' : 'bg-gray-300'
+                    index === activeIndex ? 'bg-purple-600 w-6' : 'bg-gray-300'
                   }`}
                   aria-label={`View testimonial ${index + 1}`}
                 />

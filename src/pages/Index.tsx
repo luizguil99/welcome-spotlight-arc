@@ -20,13 +20,13 @@ const Index = () => {
       <main>
         <Hero />
         <Features />
-        <div className="py-24 bg-gradient-to-b from-white to-indigo-50/30 overflow-hidden">
+        <div className="py-24 bg-gradient-to-b from-white to-purple-50/30 overflow-hidden">
           <div className="container mx-auto px-6 max-w-7xl">
             <div className={`text-center max-w-3xl mx-auto transition-all duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-              <span className="inline-block px-3 py-1 text-sm font-semibold text-indigo-600 bg-indigo-50 rounded-full mb-3 uppercase tracking-wider">
+              <span className="inline-block px-3 py-1 text-sm font-semibold text-purple-600 bg-purple-50 rounded-full mb-3 uppercase tracking-wider">
                 About Us
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-indigo-800 to-gray-900" id="about">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-purple-800 to-indigo-800" id="about">
                 Our Design Philosophy
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
